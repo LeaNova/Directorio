@@ -56,23 +56,6 @@ public class Directorio {
         return clientes;
     }
     
-    //Con DNI elimina al cliente del directorio
-    /*
-    public Map<String, Cliente> borrarCliente(long dni) {
-        String telefono = null;
-        
-        Set<String> claves = registros.keySet();
-        
-        for (String key: claves) {
-            if (registros.get(key).getDni() == dni) {
-                telefono = key;
-                break;
-            }
-        }
-        return (Map<String, Cliente>) registros.remove(telefono);
-    }
-    */
-    
     public Object borrarCliente(long dni) {
         String telefono = null;
         
@@ -86,21 +69,4 @@ public class Directorio {
         }
         return registros.remove(telefono);
     }
-    
-    /*
-    public void borrarCliente(long dni){
-        
-        Set<String> tels = registros.keySet();
-        Iterator it=tels.iterator();
-        while(it.hasNext()){
-        
-            Long telefono=(Long)it.next();
-            Cliente c = registros.get(telefono);
-            if(c.getDni() == dni){
-            
-                registros.remove(telefono);
-            }
-        }
-    }
-    */
 }
